@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Concatenater</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Inputs -->
+    <main>
+        <form>
+            <!-- Text Input 1-->
+            <div id="input-1-container" class="input-container">
+                <header for="input-1" id="input-1-header">Input A</header>
+                <textarea type="text" id="input-1" class="input"></textarea>
+            </div>
+            <!-- Text Input 2 -->
+            <div id="input-2-container" class="input-container">
+                <header for="input-2" id="input-2-header">Input B</header>
+                <textarea type="text" id="input-2" class="input"></textarea>
+            </div>
+            <!-- Output -->
+            <div id="output-container" class="output-container">
+                <header for="output-1" id="output-header">Output A + B</header>
+                <textarea type="text" id="output" class="output"></textarea>
+            </div>
+        </form>
+    </main>
+    <!-- Options -->
+    <aside>
+        <div id="options-container">
+            <!-- Seperator Input Container -->
+            <div id="seperator-input-container">
+                <label for="seperator">Seperator:</label>
+                <input type="text" id="seperator-input">
+                <p id="default-notice">* Space by default</p>
+            </div>
+            <!-- Remove White Space Option Container -->
+            <div id="remove-white-space-container">
+                <input type="checkbox" name="remove-white-space" id="remove-white-space-input">
+                <label for="remove-white-space">Remove White Space</label>
+            </div>
+            <!-- Remove Empty Lines Container -->
+            <div id="remove-empty-lines-container">
+                <input type="checkbox" name="remove-empty-lines" id="remove-empty-lines">
+                <label for="remove-empty-lines">Remove Empty Lines</label>    
+            </div>
+            <!-- Combine Text Button Container -->
+            <div id="combine-button-container">
+                <button id="combine-button" onclick="combine()">Combine Text!</button>
+            </div>
+        </div>
+    </aside>
+</body>
+<script src="main.js"></script>
+</html>
