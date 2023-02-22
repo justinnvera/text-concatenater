@@ -24,16 +24,28 @@ main {
 }
 /* ? Form */
 form {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5rem;
-    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr; 
+    grid-template-areas:
+    "inputA inputB output";
+    width: 100%;
     height: 100%;
+    gap: 2rem;
+    margin: 2rem;
 }
-/* ? Input Containers */
+#input-1-container {
+    grid-area: inputA;
+}
+#input-2-container {
+    grid-area: inputB;
+}
+#output-container {
+    grid-area: output;
+}
+output
+/* ? Containers */
 .input-container, .output-container {
-    width: 425px;
-    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -130,7 +142,6 @@ aside {
     margin-top: 1rem;
     padding-left: 0.7rem;
 }
-
 #options-container {
     font-family: "DM Sans", sans-serif; 
     display: flex;
@@ -141,7 +152,11 @@ aside {
     border: 1.5px solid #ccc;
     width: 90%;
 }
-
+#remove-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;    
+}
 /* ? Seperator */
 #seperator-input-container {
     position: relative;
@@ -178,4 +193,36 @@ aside {
 #combine-button:active {
     opacity: 1;
 } 
-
+/* Tablet */
+@media screen and (max-width: 768px) {
+    #options-container {
+        font-size: 12px;
+    }
+}
+/* Mobile S */
+@media screen and (max-width: 425px) {
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr; 
+        grid-template-areas:
+        "inputA"
+        "inputB"
+        "output";
+        width: 100%;
+        height: 100%;
+        gap: 1rem;
+        margin: 1rem;
+    }
+    .input-container, .output-container {
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+    }
+    #options-container {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+    }    
+}
