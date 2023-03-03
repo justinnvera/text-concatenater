@@ -12,6 +12,7 @@ let outputArray = [];
 let removeWhiteSpaceOption = document.getElementById("remove-white-space");
 let removeEmptyLinesOption = document.getElementById("remove-empty-lines");
 let customSeperatorOption = document.getElementById("seperator-input");
+let customSeperatorUserInput;
 
 // Option Variable Storage
 let filteredA = [];
@@ -28,6 +29,12 @@ function combine () {
     // Input Per Line Backup Variable
     let inputAArrayResult = inputA.value.split(/\r?\n/);
     let inputBArrayResult = inputB.value.split(/\r?\n/);
+
+    if (customSeperatorOption.value === "") {
+        customSeperatorUserInput = " ";
+    } else {
+        customSeperatorUserInput = customSeperatorOption.value;
+    }
     //  If remove whitespace is true 
     if(removeWhiteSpaceOption.checked === true) {
         for (let a = 0; a < inputAArray.length; a++) {
@@ -65,7 +72,7 @@ function combine () {
         if(inputBArrayResult[a] === undefined) {
             inputBArrayResult[a] = "";
         }
-        outputArray[a] = inputAArrayResult[a] + customSeperatorOption.value + inputBArrayResult[a];
+        outputArray[a] = inputAArrayResult[a] + customSeperatorUserInput + inputBArrayResult[a];
     }
     if(removeEmptyLinesOption.checked === true) {
         outputArray.pop();
