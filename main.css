@@ -205,6 +205,9 @@ aside {
 }
 /* Mobile S */
 @media screen and (max-width: 425px) {
+    body {
+        margin-right: 0.5rem;
+    }
     form {
         display: grid;
         grid-template-columns: 1fr;
