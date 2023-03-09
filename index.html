@@ -26,35 +26,35 @@
                 <header id="output-header">Output A + B</header>
                 <textarea type="text" id="output" class="output"></textarea>
             </div>
+                <!-- Options -->
+            <aside>
+                <div id="options-container">
+                    <!-- Seperator Input Container -->
+                    <div id="seperator-input-container">
+                        <label for="seperator">Seperator:</label>
+                        <input type="text" id="seperator-input">
+                        <p id="default-notice">* Space by default</p>
+                    </div>
+                    <div id="remove-container">
+                        <!-- Remove White Space Option Container -->
+                        <div id="remove-white-space-container">
+                            <input type="checkbox" name="remove-white-space" id="remove-white-space">
+                            <label for="remove-white-space">Remove White Space</label>
+                        </div>
+                        <!-- Remove Empty Lines Container -->
+                        <div id="remove-empty-lines-container">
+                            <input type="checkbox" name="remove-empty-lines" id="remove-empty-lines">
+                            <label for="remove-empty-lines">Remove Empty Lines</label>    
+                        </div>
+                    </div>
+                    <!-- Combine Text Button Container -->
+                    <div id="combine-button-container">
+                        <button id="combine-button" onclick="combine()">Combine Text!</button>
+                    </div>
+                </div>
+            </aside>
         </form>
     </main>
-    <!-- Options -->
-    <aside>
-        <div id="options-container">
-            <!-- Seperator Input Container -->
-            <div id="seperator-input-container">
-                <label for="seperator">Seperator:</label>
-                <input type="text" id="seperator-input">
-                <p id="default-notice">* Space by default</p>
-            </div>
-            <div id="remove-container">
-                <!-- Remove White Space Option Container -->
-                <div id="remove-white-space-container">
-                    <input type="checkbox" name="remove-white-space" id="remove-white-space">
-                    <label for="remove-white-space">Remove White Space</label>
-                </div>
-                <!-- Remove Empty Lines Container -->
-                <div id="remove-empty-lines-container">
-                    <input type="checkbox" name="remove-empty-lines" id="remove-empty-lines">
-                    <label for="remove-empty-lines">Remove Empty Lines</label>    
-                </div>
-            </div>
-            <!-- Combine Text Button Container -->
-            <div id="combine-button-container">
-                <button id="combine-button" onclick="combine()">Combine Text!</button>
-            </div>
-        </div>
-    </aside>
 </body>
 <script src="main.js"></script>
 </html>

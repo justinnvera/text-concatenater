@@ -26,9 +26,10 @@ main {
 form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr; 
+    grid-template-rows: 1fr min-content; 
     grid-template-areas:
-    "inputA inputB output";
+    "inputA inputB output"
+    "aside aside aside";
     width: 100%;
     height: 100%;
     gap: 2rem;
@@ -42,6 +43,9 @@ form {
 }
 #output-container {
     grid-area: output;
+}
+aside {
+    grid-area: aside;
 }
 output
 /* ? Containers */
@@ -204,15 +208,19 @@ aside {
     form {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr min-content; 
         grid-template-areas:
         "inputA"
         "inputB"
+        "aside"
         "output";
         width: 100%;
         height: 100%;
         gap: 1rem;
         margin: 1rem;
+    }
+    aside {
+        margin-top:0;
     }
     .input-container, .output-container {
         height: 250px;
